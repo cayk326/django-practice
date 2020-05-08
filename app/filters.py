@@ -1,7 +1,7 @@
 from django_filters import FilterSet
 from django_filters import filters
 
-from .models import Item
+from app.models import itemmodel
 
 
 class MyOrderingFilter(filters.OrderingFilter):
@@ -27,5 +27,5 @@ class ItemFilter(FilterSet):
     )
 
     class Meta:
-        model = Item
+        model = itemmodel.Item
         fields = ('name', 'sex', 'memo',)

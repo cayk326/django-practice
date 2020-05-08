@@ -1,10 +1,10 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Item
+from app.models import itemmodel
 
 
-@admin.register(Item)
+@admin.register(itemmodel.Item)
 class ItemAdmin(admin.ModelAdmin):
 
     class Meta:
