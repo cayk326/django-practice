@@ -1,11 +1,11 @@
 from django import forms
-from .models import Item
+from app.models import itemmodel
 
 
 class ItemForm(forms.ModelForm):
 
     class Meta:
-        model = Item
+        model = itemmodel.Item
         fields = ('name','age','sex','memo')
         widgets = {
                     'name': forms.TextInput(attrs={'placeholder':'記入例：山田　太郎'}),

@@ -3,15 +3,15 @@ from django_filters.views import FilterView
 
 
 from app.filters import ItemFilter
-from app.models import Item
+from app.models import itemmodel
 
 # Create your views here.
 # 検索一覧画面
 class ItemFilterView(LoginRequiredMixin, FilterView):
-    model = Item
+    model = itemmodel.Item
 
     # デフォルトの並び順を新しい順とする
-    queryset = Item.objects.all().order_by('-created_at')
+    queryset = itemmodel.Item.objects.all().order_by('-created_at')
 
     # django-filter用設定
     filterset_class = ItemFilter

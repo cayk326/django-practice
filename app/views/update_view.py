@@ -4,7 +4,7 @@ from django.views.generic.edit import UpdateView
 
 
 from app.forms import ItemForm
-from app.models import Item
+from app.models import itemmodel
 
 
 
@@ -12,6 +12,6 @@ from app.models import Item
 
 # 更新画面
 class ItemUpdateView(LoginRequiredMixin, UpdateView):
-    model = Item
+    model = itemmodel.Item
     form_class = ItemForm
     success_url = reverse_lazy('index')
